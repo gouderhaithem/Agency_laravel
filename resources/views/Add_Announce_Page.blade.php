@@ -25,28 +25,42 @@
                 <h3> {{ Auth::user()->name }}</h3>
             </div>
         </div>
-        <ul class="list-unstyled components mb-5 ">
+        <ul class="list-unstyled components mb-5  List_style">
             <li class="active ">
+            <br>
+                <br>
 
             <li>
                 <a href="Profile_Page.html"><i class="fa-solid fa-user ICONS"></i> Account</a>
             </li>
+            <br>
+            <br>
             <li>
                 <a  href="{{ url('/Home_Page') }}"><i class="fa-solid fa-user ICONS"></i> Home</a>
             </li>
+            <br>
+            <br>
 
             <li>
                 <a href="Add_Announce_Page.html "><i class="fa-solid fa-plus ICONS"></i> Add Announce</a>
             </li>
+            <br>
+            <br>
             <li>
                 <a href="User_Announces.html"><i class="fa-solid fa-bullhorn ICONS"></i> My Announces</a>
             </li>
+            <br>
+            <br>
             <li>
                 <a href="Setting_Page.html "><i class=" fa-solid fa-gear ICONS"></i> Settings</a>
             </li>
+            <br>
+            <br>
             <li>
                 <a href="Home_Page.html "><span class="fa fa-sign-out mr-3 ICONS"></span> Log Out</a>
             </li>
+            <br>
+            <br>
         </ul>
         <div class="social-media ">
             <a href="https://www.facebook.com/ "> <i class="fa-brands fa-facebook-square " style="color: white; font-size: 23px;"></i></a>
@@ -72,30 +86,35 @@
         </nav>
 
         <div class="container">
-            <form action="" class="form">
+            <form method="post" action="{{route("announce_store")}}" class="form"  >
+                @csrf
                 <label for="" class="label">Catégorie</label><br>
-                <input type="checkbox" class="input-checkbox">
+                <input type="checkbox" name="Category_id" class="input-checkbox">
                 <label for="Appartements">Appartements</label><br>
-                <input type="checkbox" class="input-checkbox">
+                <input type="checkbox" name="Category_id" value="1" class="input-checkbox">
                 <label for="Houses">Houses</label><br>
-                <input type="checkbox" class="input-checkbox">
+                <input type="checkbox" name="Category_id" class="input-checkbox">
                 <label for="Grounds">Grounds</label><br>
-                <input type="checkbox" class="input-checkbox">
-                <label for="Garages">Garages</label><br>
-                <input type="checkbox" class="input-checkbox">
+                <input type="checkbox" name="Category_id" class="input-checkbox">
+                <label for="Garages" >Garages</label><br>
+                <input type="checkbox" name="Category_id" class="input-checkbox">
                 <label for="Stores">Stores</label><br>
-                <input type="checkbox" class="input-checkbox">
+                <input type="checkbox" name="Category_id" class="input-checkbox">
                 <label for="Other">Other</label><br>
-                <label for="" class="label">Title</label><br>
-                <input type="text" class="i" placeholder="Name Of Estate"><br>
-                <label for="" class="label">Price</label><br>
-                <input type="number" class="i" placeholder="1000$"><br>
-                <label for="" class="label">Place</label><br>
-                <input type="text" class="i" placeholder="Localisation Of The Estate"><br>
-                <label for="" class="label">Description</label><br>
-                <input type="text" class="description-input" placeholder="Informations About Your Announce"><br>
-                <label for="" class="label">Photos</label><br>
-                <input type="file" class="i-photo" placeholder=" Add Photos"><br>
+                <label for="" class="label" >Title</label><br>
+                <input type="text" class="i"name="title" placeholder="Name Of Estate"><br>
+                <label for="" class="label" >room number</label><br>
+                <input type="number" class="i"name="roomnumber"  placeholder="For example 4"><br>
+                <label for="" class="label" >Surface</label><br>
+                <input type="number" class="i"name="surface"  placeholder="1000m*m"><br>
+                <label for="" class="label" >Price</label><br>
+                <input type="number" class="i"name="price"  placeholder="1000$"><br>
+                <label for="" class="label" >Place</label><br>
+                <input type="text" class="i" name="place" placeholder="Localisation Of The Estate"><br>
+                <label for="" class="label" >Description</label><br>
+                <input type="text" class="description-input" name="description" placeholder="Informations About Your Announce"><br>
+                <label for="" class="label" >Photos</label><br>
+                <input type="file" class="i-photo" name="photos" placeholder=" Add Photos"><br>
                 <button class="boutton"><i class="fa-solid fa-plus" style="margin-left: -5%; margin-right: 3%;"></i>Add Announce</button>
             </form>
 
@@ -104,6 +123,9 @@
         </div>
     </div>
 </div>
+@if(session('status'))
+    <div class="bg-success">{{session('status')}}</div>
+@endif
 
 
 

@@ -26,7 +26,7 @@ class CreateAnnouncesTable extends Migration
             $table->unsignedBigInteger("category_id")->unsigned();
             $table->foreign("category_id")->references("id")->on("categories")->onDelete("cascade");
             $table->json('place');
-            $table->unsignedBigInteger('agency_id');
+            $table->string('agency_id');
             $table->timestamps();
         });
     }

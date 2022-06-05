@@ -164,6 +164,10 @@ i-photo {
 .fa-bars:hover {
     color: #0d6efd;
 }
+.List_style a{
+    color: #0b2e13;
+    text-decoration: none;
+}
 
 #sidebar {
     background: #0d6efd;
