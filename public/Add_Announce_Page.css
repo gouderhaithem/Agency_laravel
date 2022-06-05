@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+.body {
+    background: #ecf0f3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Sora', sans-serif;
+}
+
+
+/*nav*/
+
+.fa-magnifying-glass {
+    font-size: 18px;
+}
+
+@media screen and (max-width:771px) {
+    .d-flex {
+        margin-left: -80%;
+        margin-top: 20%;
+    }
+}
+
+.point {
+    font-size: 50px;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-left: -8%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+    align-items: center;
+    justify-content: center;
+}
+
+.titre {
+    font-size: 35px;
+    font-weight: 700;
+    width: 200px;
+    font-family: 'Sora', sans-serif;
+}
+
+
+/*nav*/
+
+
+/*tittle*/
+
+.featured-tittles {
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.properties {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.featured-properties {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+
+/*tittle*/
+
+
+/*form*/
+
+.form {
+    margin-left: 10%;
+}
+
+.label {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.container {
+    margin-bottom: 10%;
+    margin-top: 2%;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background: #ecf0f3;
+    box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+    padding-top: 3%;
+    padding-bottom: 2%;
+    /*2 psk l1 li b9at drtha fl boutton mn taht*/
+}
+
+.description-input {
+    width: 40%;
+    height: 150px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #ecf0f3;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.input-checkbox {
+    background-color: #0d6efd;
+}
+
+i-photo {
+    width: 10%;
+    height: 10%;
+}
+
+.i {
+    padding-left: 3%;
+    width: 40%;
+    height: 40px;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #ecf0f3;
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.boutton {
+    align-items: center;
+    justify-content: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 20px;
+    margin-left: 35%;
+    border: none;
+    background: #0d6efd;
+    font-weight: bold;
+    margin-bottom: 1%;
+}
+
+.boutton:hover {
+    background: transparent;
+    border-radius: 0px 40px 0px 40px;
+    border-left: 3px solid #0d6efd;
+    border-right: 3px solid #0d6efd;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2s);
+    box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+
+/*form*/
+
+.fa-bars {
+    font-size: 30px;
+}
+
+#sidebarCollapse {
+    outline: none;
+    border: none;
+}
+
+.fa-bars:hover {
+    color: #0d6efd;
+}
+
+#sidebar {
+    background: #0d6efd;
+}
+
+.bg-wrap {
+    background: #0d6efd;
+}
+
+@media screen and (max-width:992px) {
+    .navbar-brand {
+        margin-top: 7%;
+    }
+}
+
+.social-media {
+    margin-left: 35%;
+    margin-top: 80%;
+}
+
+.rights {
+    margin-left: -20%;
+}
+
+.ICONS {
+    margin-right: 3%;
+}
