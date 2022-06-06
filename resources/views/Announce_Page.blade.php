@@ -102,27 +102,21 @@
         <div class="row ">
             <div class="col-sm-5 col-md-6 col-12 pb-4 " data-aos="fade-right " data-aos-duration="1500 ">
                 <h1>Comments</h1>
-                <div class="comment mt-4 text-justify float-left " style="border-bottom:1px solid #0d6efd ; border-radius: 0px; "> <img src="https://i.imgur.com/yTFUilP.jpg " alt=" " class="rounded-circle " width="40 " height="40 ">
-                    <h4 style="color: black; ">Jhon Doe</h4> <span style="color: gray; ">- 20 October, 2018</span> <br>
-                    <p style="color: black; ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
+                @foreach($comments as $comment)
+                <div class="comment mt-4 text-justify float-left " style="border-bottom:1px solid #0d6efd ; border-radius: 0px; "> <img src="https://png.pngtree.com/png-clipart/20190924/original/pngtree-business-user-profile-vector-png-image_4830519.jpg " alt=" " class="rounded-circle " width="40 " height="40 ">
+                    <h4 style="color: black; ">{{$comment['user_name']}}</h4> <span style="color: gray; ">{{$comment['created_at']}}</span> <br>
+                    <p style="color: black; ">{{$comment['commentaires']}}</p>
                 </div>
-                <div class="text-justify darker mt-4 float-right " style="border-bottom:1px solid #0d6efd ; border-radius: 0px; "> <img src="https://i.imgur.com/CFpa3nK.jpg " alt=" " class="rounded-circle " width="40 " height="40 ">
-                    <h4 style="color: black; ">Rob Simpson</h4> <span style="color: gray; ">- 20 October, 2018</span> <br>
-                    <p style="color: black; ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                </div>
-                <div class="comment mt-4 text-justify " style="border-bottom:1px solid #0d6efd ; border-radius: 0px; "> <img src="https://i.imgur.com/yTFUilP.jpg " alt=" " class="rounded-circle " width="40 " height="40 ">
-                    <h4 style="color: black; ">Jhon Doe</h4> <span style="color: gray; ">- 20 October, 2018</span> <br>
-                    <p style="color: black; ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                </div>
-                <div class="darker mt-4 text-justify " style="border-bottom:1px solid #0d6efd ; border-radius: 0px; "> <img src="https://i.imgur.com/CFpa3nK.jpg " alt=" " class="rounded-circle " width="40 " height="40 ">
-                    <h4 style="color: black; ">Rob Simpson</h4> <span style="color: gray; ">- 20 October, 2018</span> <br>
-                    <p style="color: black; ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus numquam assumenda hic aliquam vero sequi velit molestias doloremque molestiae dicta?</p>
-                </div>
+                @endforeach
+
             </div>
             <div class="col-lg-4 col-md-5 col-sm-4 offset-md-1 offset-sm-1 col-12 mt-4 leave-div " data-aos="fade-right " data-aos-duration="1500 ">
-                <form id="algin-form " class="comment-form ">
+                <form id="algin-form " action="{{route("announce_comment")}}" method="post" class="comment-form ">
+                    @csrf
                 <div class="form-group ">
-                    <h4>Leave a comment</h4> <label for="message ">Your Comment</label> <textarea class="text-area " name="msg " id=" " msg cols="23 " rows="5 " class="form-control " style="background-color: #ecf0f3;border-radius: 15px; border:none; color:
+                    <h4>Leave a comment</h4>
+                    <label for="message ">Your Comment</label>
+                    <textarea class="text-area " name="commentaires" id=" " msg cols="23 " rows="5 " class="form-control " style="background-color: #ecf0f3;border-radius: 15px; border:none; color:
                         black; "></textarea>
                 </div>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\announce;
+use App\Models\comment;
 use Illuminate\Http\Request;
 use App\Models\image;
 use Illuminate\Support\Facades\Auth;
@@ -39,4 +40,5 @@ class add_announce extends Controller
         }
         return redirect('/')->with('status', 'Blog Post Form Data Has Been inserted');
     }
+
 }

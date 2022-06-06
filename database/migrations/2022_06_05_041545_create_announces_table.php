@@ -18,16 +18,14 @@ class CreateAnnouncesTable extends Migration
             $table->string('user_name');
             $table->string('title');
             $table->mediumText('description');
-            $table->enum('dealtype',['rent','sale','exchange']);
-            $table->enum('propretytype',['appartement','villa',
-                'carcass','building','studio','land','barn','bungalow','others']);
+
             $table->integer('roomnumber');
             $table->integer('surface');
             $table->integer('price');
             $table->unsignedBigInteger("category_id")->unsigned();
             $table->foreign("category_id")->references("id")->on("categories")->onDelete("cascade");
             $table->string('place');
-            $table->string('agency_id');
+
             $table->timestamps();
         });
     }

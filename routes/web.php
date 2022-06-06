@@ -24,3 +24,4 @@ Route::get('/Add_Announce_Page', [App\Http\Controllers\add_announce::class, 'ind
 Route::get('/Home_Page', [App\Http\Controllers\home_page::class, 'index'])->name('Home_Page');
 Route::post('/Add_Announce_Page', [App\Http\Controllers\add_announce::class, 'store'])->name('announce_store');
 Route::get('/announce_details', [App\Http\Controllers\announce_details::class, 'index'])->name('announce_page');
+Route::post('/announce_details', [App\Http\Controllers\announce_details::class, 'addcomment'])->name('announce_comment');
