@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\announce;
 use Illuminate\Http\Request;
 
-class home_page extends Controller
+class announce_details extends Controller
 {
     //
     function index(){
 
         $data = announce::all();
 
-        return view('Home_Page',['announces'=>$data]);
+        return view('Announce_Page',['announces'=>$data]);
     }
 }

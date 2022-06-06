@@ -15,6 +15,7 @@ class CreateAnnouncesTable extends Migration
     {
         Schema::create('announces', function (Blueprint $table) {
             $table->id();
+            $table->string('user_name');
             $table->string('title');
             $table->mediumText('description');
             $table->enum('dealtype',['rent','sale','exchange']);
@@ -25,7 +26,7 @@ class CreateAnnouncesTable extends Migration
             $table->integer('price');
             $table->unsignedBigInteger("category_id")->unsigned();
             $table->foreign("category_id")->references("id")->on("categories")->onDelete("cascade");
-            $table->json('place');
+            $table->string('place');
             $table->string('agency_id');
             $table->timestamps();
         });

@@ -86,7 +86,7 @@
         </nav>
 
         <div class="container">
-            <form method="post" action="{{route("announce_store")}}" class="form"  >
+            <form method="post" action="{{route("announce_store")}}" class="form" enctype="multipart/form-data"  >
                 @csrf
                 <label for="" class="label">Catégorie</label><br>
                 <input type="checkbox" name="Category_id" class="input-checkbox">
@@ -114,7 +114,7 @@
                 <label for="" class="label" >Description</label><br>
                 <input type="text" class="description-input" name="description" placeholder="Informations About Your Announce"><br>
                 <label for="" class="label" >Photos</label><br>
-                <input type="file" class="i-photo" name="photos" placeholder=" Add Photos"><br>
+                <input type="file" class="i-photo" name="photos[]" multiple placeholder=" Add Photos"><br>
                 <button class="boutton"><i class="fa-solid fa-plus" style="margin-left: -5%; margin-right: 3%;"></i>Add Announce</button>
             </form>
 

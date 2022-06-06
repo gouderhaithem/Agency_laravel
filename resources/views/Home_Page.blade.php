@@ -125,43 +125,19 @@
         </div>
 
         <div class="cards ">
+            @foreach($announces as $announce)
             <div class="card shadow p-3 mb-5 bg-body rounded card-- " data-aos="fade-down" data-aos-duration="1000" style="width: 18rem; ">
                 <img src="images/card-new.jpg " class="card-img-top " alt="... ">
                 <div class="card-body ">
-                    <h5 class="card-title title-card ">Texas Modern Villa</h5>
-                    <p class="card-text description ">12bds . 1ba . 3,21sqft</p>
-                    <a href="Announce_Page.html " class="btn btn-primary see-more" id="button2" style="width: 55%; "><i class="fa-solid fa-circle-info "></i>See More</a>
+                    <h5 class="card-title title-card ">{{$announce['title']}}</h5>
+                    <p class="card-text description ">{{$announce['price']}}DA .  {{$announce['surface']}}m*m</p>
+                    <a href="{{ url('/announce_details') }}" class="btn btn-primary see-more" id="button2" style="width: 55%; "><i class="fa-solid fa-circle-info "></i>See More</a>
                 </div>
             </div>
-
-            <div class="card shadow p-3 mb-5 bg-body rounded card--" data-aos="fade-up" data-aos-duration="1000" style="width: 18rem; ">
-                <img src="images/card1.jpg " class="card-img-top " alt="... ">
-                <div class="card-body ">
-                    <h5 class="card-title title-card ">NY Buisness House</h5>
-                    <p class="card-text description ">5bds . 4ba . 4,402sqft</p>
-                    <a href="Announce_Page.html " class="btn btn-primary see-more " id="button2" style="width: 55%; "><i class="fa-solid fa-circle-info for-hover " ">
-                        </i>See More</a>
-                </div>
+            @endforeach
             </div>
-            <div class="card shadow p-3 mb-5 bg-body rounded card---" data-aos="fade-down" data-aos-duration="1000" style="width: 18rem;">
-                <img src="images/card2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title title-card">Okinawa Summer House</h5>
-                    <p class="card-text description">5bds . 4ba . 4,402sqft</p>
-                    <a href="Announce_Page.html" class="btn btn-primary  see-more" id="button2" style="width: 55%;"><i class="fa-solid fa-circle-info for-hover" " ></i>See More</a>
-                </div>
-
-            </div>
-            <div class="card shadow p-3 mb-5 bg-body rounded card----" data-aos="fade-up" data-aos-duration="1000" style="width: 18rem;">
-                <img src="images/card3.jpg  " class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title title-card">Los Angeles Summer House</h5>
-                    <p class="card-text description">5bds . 4ba . 4,402sqft</p>
-                    <a href="Announce_Page.html" class="btn btn-primary see-more" id="button2" style="width: 55%;"><i class="fa-solid fa-circle-info for-hover" " ></i>See More</a>
-                </div>
 
 
-            </div>
 
             <a href="" class="view">View All<box-icon name='right-arrow-alt'></box-icon></a>
         </div>
